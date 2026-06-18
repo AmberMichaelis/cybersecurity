@@ -14,4 +14,4 @@ if __name__ == "__main__":
     filename = sys.argv[1]
         
     hash_value = calculate_sha256(filename)
-    print("Hash:", hash_value)
+    print("SHA-256:", hash_value)
