@@ -146,6 +146,84 @@ IP addresses found:
 198.51.100.22: 1
 ```
 
+## Skills
+
+This project demonstrates:
+
+- Python scripting
+- Regular expressions
+- File parsing
+- Indicator extraction
+- Frequency counting
+- Security log analysis
+- Command-line tool development
+
+---
+---
+
+## `ioc_parser.py`
+
+`ioc_parser.py` extracts common indicators of compromise from a text file or log file.
+
+Indicators of compromise, often called IOCs, are pieces of evidence that may help identify suspicious or malicious activity. Common examples include IP addresses, URLs, email addresses, and cryptographic file hashes.
+
+This tool is designed to support basic log review, threat analysis, and incident response workflows by quickly identifying security-relevant indicators inside a file.
+
+The current version extracts:
+
+- IPv4 addresses
+- URLs
+- Email addresses
+- MD5 hashes
+- SHA-1 hashes
+- SHA-256 hashes
+
+### How to Use
+
+Example:
+
+```bash
+python3 tools/ioc_parser.py sample-data/example.log
+```
+
+Example output:
+
+```text
+IPv4 Addresses
+--------------
+192.168.1.25: 3
+203.0.113.55: 2
+10.0.0.14: 1
+198.51.100.22: 1
+
+URLs
+----
+http://malicious-example.com/login: 1
+https://example-bad-domain.com/payload: 1
+
+Email Addresses
+---------------
+attacker@example.com: 1
+
+Hashes
+------
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855: 1
+5d41402abc4b2a76b9719d911017c592: 1
+```
+
+## Skills
+
+This project demonstrates:
+
+- Python scripting
+- Regular expressions
+- Indicator extraction
+- File parsing
+- Frequency counting
+- Log review
+- Incident response support
+- Threat analysis fundamentals
+
 ---
 ---
 
@@ -157,7 +235,8 @@ security-automation/
 ├── tools/
 │   ├── hash_file.py
 │   ├── log_keyword_scanner.py
-│   └── ip_extractor.py
+│   ├── ip_extractor.py
+│   └── ioc_parser.py
 └── sample-data/
     ├── example.txt
     └── example.log
@@ -168,7 +247,6 @@ security-automation/
 
 Future tools include:
 
-- IOC parser
 - Basic URL analyzer
 - Hash comparison tool
 - Simple incident response helper scripts
