@@ -112,6 +112,43 @@ This project demonstrates:
 - Incident response support
 - Command-line tool development
 
+---
+---
+
+## `ip_extractor.py`
+
+`ip_extractor.py` extracts IPv4 addresses from a file and counts how often each address appears.
+
+IP extraction is useful during log review, incident response, and threat analysis because analysts often need to identify repeated source addresses, suspicious external connections, or systems involved in an event.
+
+The current version searches for IPv4 address patterns and displays each address with its occurrence count.
+
+### How to Use
+
+```bash
+python3 tools/ip_extractor.py sample-data/example.log
+```
+
+Example:
+
+```bash
+python3 tools/ip_extractor.py sample-data/example.log
+```
+
+Expected output:
+
+```text
+IP addresses found:
+----------------------------------------
+192.168.1.25: 3
+10.0.0.14: 1
+203.0.113.55: 1
+198.51.100.22: 1
+```
+
+---
+---
+
 ## Project Structure
 
 ```text
@@ -119,7 +156,8 @@ security-automation/
 ├── README.md
 ├── tools/
 │   ├── hash_file.py
-│   └── log_keyword_scanner.py
+│   ├── log_keyword_scanner.py
+│   └── ip_extractor.py
 └── sample-data/
     ├── example.txt
     └── example.log
@@ -130,7 +168,6 @@ security-automation/
 
 Future tools include:
 
-- IP address extractor
 - IOC parser
 - Basic URL analyzer
 - Hash comparison tool

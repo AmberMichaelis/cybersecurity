@@ -6,3 +6,8 @@ Unauthorized access detected
 Suspicious outbound connection blocked
 Malware signature detected
 Backup completed successfully
+Failed login attempt from 192.168.1.25
+Connection accepted from 10.0.0.14
+Suspicious outbound connection to 203.0.113.55
+Blocked request from 192.168.1.25
+Unauthorized access attempt from 198.51.100.22
