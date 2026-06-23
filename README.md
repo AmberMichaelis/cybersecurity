@@ -58,6 +58,7 @@ This project demonstrates:
 - Security documentation
 
 ---
+
 ---
 
 ### `log_keyword_scanner.py`
@@ -113,6 +114,7 @@ This project demonstrates:
 - Command-line tool development
 
 ---
+
 ---
 
 ## `ip_extractor.py`
@@ -159,6 +161,7 @@ This project demonstrates:
 - Command-line tool development
 
 ---
+
 ---
 
 ## `ioc_parser.py`
@@ -225,18 +228,76 @@ This project demonstrates:
 - Threat analysis fundamentals
 
 ---
+
+---
+
+## `url_analyzer.py`
+
+`url_analyzer.py` performs a basic review of a URL and identifies simple warning signs that may appear in phishing links or suspicious web activity.
+
+This tool is not a malware scanner or reputation checker. It is designed to practice URL parsing, basic security review, and command-line automation.
+
+The current version checks for:
+
+- Non-HTTPS URLs
+- Suspicious keywords
+- Unusually long URLs
+- `@` symbols
+- Multiple hyphens in the domain
+
+### How to Use
+
+Example:
+
+```bash
+python3 tools/url_analyzer.py "http://secure-login-example.com/update-password"
+```
+
+Example output:
+
+## URL Analysis
+
+Original URL: http://secure-login-example.com/update-password
+Scheme: http
+Domain: secure-login-example.com
+Path: /update-password
+Query String: None
+
+## Findings
+
+[WARNING] URL does not use HTTPS.
+[WARNING] Suspicious keyword found: login
+[WARNING] Suspicious keyword found: secure
+[WARNING] Suspicious keyword found: update
+[WARNING] Suspicious keyword found: password
+
+## Skills
+
+This project demonstrates:
+
+- Python scripting
+- URL parsing
+- Basic phishing analysis
+- String matching
+- Command-line tool development
+- Security automation
+
+---
+
 ---
 
 ## Project Structure
 
 ```text
+
 security-automation/
 ├── README.md
 ├── tools/
 │   ├── hash_file.py
 │   ├── log_keyword_scanner.py
 │   ├── ip_extractor.py
-│   └── ioc_parser.py
+│   ├── ioc_parser.py
+│   └── url_analyzer.py
 └── sample-data/
     ├── example.txt
     └── example.log
@@ -247,7 +308,6 @@ security-automation/
 
 Future tools include:
 
-- Basic URL analyzer
 - Hash comparison tool
 - Simple incident response helper scripts
 
