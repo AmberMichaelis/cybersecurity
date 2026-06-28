@@ -255,21 +255,23 @@ python3 tools/url_analyzer.py "http://secure-login-example.com/update-password"
 
 Example output:
 
-## URL Analysis
-
+```text
+URL Analysis
+----------------------------------------
 Original URL: http://secure-login-example.com/update-password
 Scheme: http
 Domain: secure-login-example.com
 Path: /update-password
 Query String: None
 
-## Findings
-
+Findings
+----------------------------------------
 [WARNING] URL does not use HTTPS.
 [WARNING] Suspicious keyword found: login
 [WARNING] Suspicious keyword found: secure
 [WARNING] Suspicious keyword found: update
 [WARNING] Suspicious keyword found: password
+```
 
 ## Skills
 
