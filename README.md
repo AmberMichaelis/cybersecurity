@@ -288,14 +288,57 @@ This project demonstrates:
 
 ---
 
+## `hash_compare.py`
+
+`hash_compare.py` compares a file's SHA-256 hash against a known hash value.
+
+Hash comparison is useful in cybersecurity because analysts often need to verify whether a file matches a known-good file, a suspicious file, or a known malware indicator.
+
+The tool calculates the SHA-256 hash of the provided file and compares it to the known hash supplied by the user.
+
+### How to Use
+
+Example:
+
+```bash
+python3 tools/hash_compare.py sample-data/example.txt <known_sha256_hash>
+```
+
+Example output:
+
+```text
+Hash Comparison
+----------------------------------------
+File: sample-data/example.txt
+Calculated SHA-256: <calculated_hash>
+Known SHA-256:      <known_hash>
+
+[MATCH] The file hash matches the known hash.
+```
+
+## Skills
+
+This project demonstrates:
+
+- Python scripting
+-File hashing
+- Hash comparison
+- File integrity verification
+- Incident response support
+- Command-line tool development
+
+---
+
+---
+
 ## Project Structure
 
 ```text
-
 security-automation/
 ├── README.md
 ├── tools/
 │   ├── hash_file.py
+│   ├── hash_compare.py
 │   ├── log_keyword_scanner.py
 │   ├── ip_extractor.py
 │   ├── ioc_parser.py
@@ -310,7 +353,6 @@ security-automation/
 
 Future tools include:
 
-- Hash comparison tool
 - Simple incident response helper scripts
 
 ## Status
