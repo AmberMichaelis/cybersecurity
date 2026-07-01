@@ -321,11 +321,63 @@ Known SHA-256:      <known_hash>
 This project demonstrates:
 
 - Python scripting
--File hashing
+- File hashing
 - Hash comparison
 - File integrity verification
 - Incident response support
 - Command-line tool development
+
+---
+
+---
+
+## `ir_helper.py`
+
+`ir_helper.py` creates a simple incident response summary from command-line input.
+
+This tool is designed to help organize early investigation details such as the incident type, affected system, severity, and initial notes. It also prints a basic list of recommended first steps that an analyst may take during the beginning of an incident response process.
+
+Incident response documentation is important because security analysts need to record what happened, what systems were affected, what evidence was observed, and what actions were taken.
+
+### How to Use
+
+Example:
+
+```bash
+python3 tools/ir_helper.py "Failed Login Activity" "Windows VM" "Medium" "Multiple failed login attempts were observed in the security logs."
+```
+
+Example output:
+
+```text
+Incident Response Helper
+----------------------------------------
+Timestamp: 2026-06-30 12:00:00
+Incident Type: Failed Login Activity
+Affected System: Windows VM
+Severity: Medium
+
+Initial Notes:
+Multiple failed login attempts were observed in the security logs.
+
+Recommended First Steps:
+1. Confirm the incident details.
+2. Preserve relevant logs and evidence.
+3. Identify affected users, systems, or accounts.
+4. Contain the issue if there is an active threat.
+5. Escalate to the appropriate security or IT team.
+6. Document all actions taken.
+```
+
+## Skills
+
+This project demonstrates:
+
+- Python scripting
+- Incident response documentation
+- Command-line input handling
+- Security investigation workflow
+- Report generation
 
 ---
 
@@ -342,19 +394,10 @@ security-automation/
 │   ├── log_keyword_scanner.py
 │   ├── ip_extractor.py
 │   ├── ioc_parser.py
-│   └── url_analyzer.py
+│   ├── url_analyzer.py
+│   └── ir_helper.py
 └── sample-data/
     ├── example.txt
     └── example.log
 
 ```
-
-## Planned Additions
-
-Future tools include:
-
-- Simple incident response helper scripts
-
-## Status
-
-This project is in progress and will be updated as new tools are added.
